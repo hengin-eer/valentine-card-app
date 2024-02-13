@@ -1,12 +1,13 @@
 "use client";
 
-import { cardContentsState } from "@/states/cardContentsState";
+import { cardAuthorState, cardBodyState } from "@/states/cardContentsState";
 import { useRecoilState } from "recoil";
 
 export const CardBody = ({}) => {
-    const [cardContents, setCardContents] = useRecoilState(cardContentsState);
+    const [cardAuthor, setCardAuthor] = useRecoilState(cardAuthorState);
+    const [cardBody, setCardBody] = useRecoilState(cardBodyState);
     const updateContents = (e) => {
-        setCardContents(e.target.value);
+        setCardBody(e.target.value);
     }
 
     return (
@@ -19,11 +20,10 @@ export const CardBody = ({}) => {
             />
             <textarea
                 className="underline decoration-1 decoration-dashed decoration-slate-400 underline-offset-8  leading-[2.2] w-full h-full px-8 pt-10 pb-6 border-2 rounded-md resize-none border-slate-300"
-                rows={6} value={cardContents} placeholder="想いを伝えよう！！"
+                rows={6} value={cardBody} placeholder="想いを伝えよう！！"
                 onChange={(e) => updateContents(e)}
             >
             </textarea>
-            <p className="leading-[2.2] w-full whitespace-pre-wrap">{cardContents}</p>
         </form>
     )
 }
