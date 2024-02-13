@@ -6,7 +6,7 @@ export const Header = () => {
 
     return (
         <header className="w-full h-[80px] px-8 flex items-center justify-between text-white bg-p-200">
-            <h1 className="text-xl">バレンタインカード アプリ</h1>
+            <h1 className="text-xl">Happy Valentine's Card</h1>
             <ul className="flex items-center gap-5">
                 <Link href={MY_X_LINK}>
                     <li>🐦My X</li>
