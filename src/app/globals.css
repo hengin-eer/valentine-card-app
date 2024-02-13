@@ -14,3 +14,39 @@
     text-wrap: balance;
   }
 }
+
+[type=radio]:checked {
+  background-size: 1rem 1rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23fff' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8' cy='8' r='3'/%3E%3C/svg%3E");
+}
+
+.dark [type=checkbox]:checked,
+.dark [type=radio]:checked,
+[type=checkbox]:checked,
+[type=radio]:checked {
+  background-color: currentColor;
+  background-position: center;
+}
+
+[type=radio] {
+  border-radius: 100%;
+}
+
+[type=checkbox],
+[type=radio] {
+  --tw-shadow: 0 0 #0000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #ffffff;
+  background-origin: border-box;
+  border-color: var(--color-p-300);
+  border-width: 1px;
+  color: var(--color-p-400);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
