@@ -4,6 +4,7 @@ import { PreviewCardBody } from "@/components/PreviewCardBody";
 
 export default function page(searchParams) {
     const cardContents = {
+        "choco": searchParams.searchParams.choco,
         "author": searchParams.searchParams.author,
         "body": searchParams.searchParams.body,
     };
