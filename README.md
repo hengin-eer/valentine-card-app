@@ -1,10 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Valentine Card App
+
+バレンタインが近づいていたので何かアプリをサクッと作ってみたかったのでバレンタインカードのアプリを作ってみました！
+
+このアプリでは以下の情報を入力してもらいます。
+
+- 送りたいチョコのタイプ（画像が添付されます）
+- 送り主の名前（ニックネーム推奨）
+- メッセージ
+
+情報を入力したらシェアボタンから共有するだけ！
+こんな風に気軽にバレンタインカードをシェア出来ちゃいます。
+
+![Top Page1](./README_IMG/top-page1.png)
+
+![Top Page2](./README_IMG/top-page2.png)
+
+## Tech
+今回は以下の技術を使ってみました。
+
+- Next.js(App router)
+- Tailwind CSS
+- URLパラメータ
+
+そもそもの目的の1つが`App Router`に入門してみよう！ということでした。
+また、URLパラメータに興味を持つきっかけがあったので、これも使ってみようということでした。
+
+アプリの性質上、結果的に`"use client";`ばかりでなかなか`App Router`を活かしきれなかったなあ～と思います。
+
+またシェアするURLのパラメータにはそのままのテキストがぶち込まれていて、文章が長いしセキュリティ的にもどうなの？とは思っています。
+
+なのでハッシュ化などのなんらかの措置を取りたいです。
 
 ## Getting Started
+Next.jsで制作したので本家と立ち上げるコマンド変わんないです。
 
-First, run the development server:
-
-```bash
+```shell
 npm run dev
 # or
 yarn dev
@@ -14,23 +44,4 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+立ち上げ後は http://localhost:3000 を開いていただければ良いです。
