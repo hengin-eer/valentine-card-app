@@ -1,14 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export const CardShareButton = ({
     choco,
     author,
     body,
 }) => {
-    const location = window.location;
-    const shareURL = `${location.protocol}//${location.host}/preview/?choco=${choco}&author=${author}&body=${body}`;
+    const [shareURL, setShareURL] = useState('');
+    useEffect(() => {
+        const location = window.location;
+        const url = `${location.protocol}//${location.host}/preview/?choco=${choco}&author=${author}&body=${body}`;
+        setShareURL(url);
+    }, [])
 
     const copyShareURL = () => {
         navigator.clipboard.writeText(shareURL);
