@@ -16,6 +16,7 @@ export const CardBody = ({ }) => {
                 type="text" value={cardAuthor} placeholder="あなたのお名前（ニックネーム推奨）"
                 onChange={(e) => setCardAuthor(e.target.value)}
             />
+            {/* Toの名前も入力できるようにしたい。inputを横に2つ並べたい */}
             <div className="relative">
                 <img
                     className="absolute h-[50px] aspect-square top-[-20px] left-[50%] translate-x-[-50%]"

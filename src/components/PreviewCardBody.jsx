@@ -18,6 +18,10 @@ export const PreviewCardBody = ({ cardContents }) => {
                     <p>
                         {cardContents.body}
                     </p>
+                    {/* From toの両方が欲しい。あと、右や左寄せしたときに余るスペースの活用法求む！
+                    例えば日付（不要？）、From to並べる、 */}
+                    {/* アニメーションも欲しい（ボックスを開封、チョコが出てくる、チョコは上に移動しカードもフェードイン） */}
+                    {/* もっとアイコン使おうぜ！From toの先頭や、追加要素があるなら。。 */}
                 </div>
             </div>
         </div>
